@@ -50,7 +50,6 @@ router.post("/", [
             return res.status(400).json({msg: "invalid credentials"});
         }
 
-
         const payload = {
             user: {
                 id: user.id
