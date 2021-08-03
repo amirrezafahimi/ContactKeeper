@@ -7,7 +7,7 @@ import {
     REMOVE_ALERT
 } from "../types";
 
-const AlertState = props => {
+const AlertState = (props) => {
     const initialState = [];
 
     const [state, dispatch] = useReducer(alertReducer, initialState);
@@ -25,7 +25,7 @@ const AlertState = props => {
             alerts: state,
             setAlert
         }}>
-
+            {props.children}
         </AlertContext.Provider>
     );
 };
